@@ -1,0 +1,6 @@
+@nauka_HostAddress = http://localhost:5052
+
+GET {{nauka_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
