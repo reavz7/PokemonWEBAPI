@@ -22,8 +22,6 @@ namespace nauka.Controllers
             _reviewerRepository = reviewerRepository;
             _mapper = mapper;
         }
-
-
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Reviewer>))]
         public IActionResult GetReviewers()
@@ -35,11 +33,6 @@ namespace nauka.Controllers
             return Ok(reviewers);
 
         }
-
-
-
-
-
 
         [HttpGet("{reviewerId}")]
         [ProducesResponseType(200, Type = typeof(Reviewer))]
