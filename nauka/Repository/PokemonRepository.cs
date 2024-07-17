@@ -14,16 +14,6 @@ namespace nauka.Repository
             _context = context;
         }
 
-        public bool CreatePokemon(int pokeId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool CreatePokemon(int ownerId, int categoryId, Pokemon pokemon)
-        {
-            throw new NotImplementedException();
-        }
-
         public Pokemon GetPokemon(int id)
         {
             return _context.Pokemon.Where(p => p.Id == id).FirstOrDefault();
@@ -50,11 +40,6 @@ namespace nauka.Repository
         public bool PokemonExists(int pokeId)
         {
             return _context.Pokemon.Any(p => p.Id == pokeId);
-        }
-
-        public bool Save()
-        {
-            throw new NotImplementedException();
         }
     }
 }
