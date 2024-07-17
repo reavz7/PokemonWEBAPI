@@ -20,17 +20,17 @@ namespace nauka.Repository
 
         public ICollection<Category> GetCategories()
         {
-            throw new NotImplementedException();
+            return _context.Categories.ToList();
         }
 
         public Category GetCategory(int id)
         {
-            throw new NotImplementedException();
+            return _context.Categories.Where(e => e.Id == id).FirstOrDefault();
         }
 
         public ICollection<Pokemon> GetPokemonByCategory(int categoryId)
         {
-            throw new NotImplementedException();
+            return _context.PokemonCategories.Where(e => e.CategoryId == categoryId).Select(c => c.Pokemon).ToList();
         }
     }
 }
