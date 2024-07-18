@@ -24,7 +24,6 @@ namespace nauka.Repository
             //dodawanie, aktualizowanie, modyfikowanie
             //moze byc connected albo disconnected
             _context.Add(category);
-            _context.SaveChanges();
             return Save();
             
         }
@@ -47,14 +46,15 @@ namespace nauka.Repository
         public bool Save()
         {
            var saved = _context.SaveChanges();
-            if (saved > 0)
-            {
-                return true;
-            }
-            else { 
+            return saved > 0 ? true : false;
+            //if (saved > 0)
+            //{
+            //    return true;
+            //}
+            //else { 
             
-                return false;
-            }
+            //    return false;
+            //}
         }
     }
 }
