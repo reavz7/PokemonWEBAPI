@@ -92,5 +92,6 @@ namespace nauka.Controllers
             return Ok("Succesfully created a new category! :)");
         }
 
+
     }
 }
