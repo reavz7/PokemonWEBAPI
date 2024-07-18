@@ -47,14 +47,6 @@ namespace nauka.Repository
         {
            var saved = _context.SaveChanges();
             return saved > 0 ? true : false;
-            //if (saved > 0)
-            //{
-            //    return true;
-            //}
-            //else { 
-            
-            //    return false;
-            //}
         }
     }
 }
