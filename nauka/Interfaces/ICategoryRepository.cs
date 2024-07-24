@@ -9,6 +9,8 @@ namespace nauka.Interfaces
         ICollection<Pokemon> GetPokemonByCategory(int categoryId);
         bool CategoryExists(int id);
         bool CreateCategory(Category category);
+
+        bool UpdateCategory(Category category);
         bool Save();
     }
 }
